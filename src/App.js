@@ -16,9 +16,10 @@ export default function App() {
 
   return (
     <div>
-      <h1>{state}</h1>
-      <button onClick={() => depositMoney(1000)}> Deposit </button>
-      <button onClick={() => withdrawMoney(1000)}> Withdraw </button>
+      <h1>Selected Room : {state.selectedRoom}</h1>
+      <h1>Selected Floor : {state.selectedFloor}</h1>
+      <button onClick={() => depositMoney(1000)}> Room 1 </button>
+      <button onClick={() => withdrawMoney(1000)}> Room 2 </button>
     </div>
   );
 }

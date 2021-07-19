@@ -1,11 +1,11 @@
-const reducer = (state = 0, action) => {
+const reducer = (state = { selectedRoom: '', selectedFloor: '' }, action) => {
   switch (action.type) {
     case 'deposit':
-      return state + action.payload;
+      return { ...state, selectedFloor: 'FirstFloor', selectedRoom: 'Room1' };
     case 'withdraw':
-      return state - action.payload;
+      return { ...state, selectedFloor: 'SecondFloor', selectedRoom: 'Room2' };
     default:
-      return state;
+      return { ...state };
   }
 };
 
